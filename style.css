@@ -1,0 +1,92 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:"Noto Sans KR",sans-serif;
+  background: #white; /* 종이 배경!! */
+  color:#000;
+  overflow-x: hidden;
+}
+
+/* 드로잉 섹션 */
+.hero{
+  height:100vh;
+  width:100vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  background:transparent;
+}
+
+.main-body{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  pointer-events:none;
+  filter: contrast(1.08);
+}
+
+/* 클릭 핫스팟 - 임시 좌표 */
+.hotspot{
+  position:absolute;
+  cursor:pointer;
+  opacity:0; /* 조정 가능 */
+}
+
+.head  {top:8%;  left:42%; width:18%; height:18%;}
+.chest {top:32%; left:39%; width:22%; height:22%;}
+.legs  {top:58%; left:41%; width:20%; height:22%;}
+.feet  {top:84%; left:43%; width:16%; height:16%;}
+
+.statement-section{
+  min-height:100vh;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background:transparent;
+}
+
+.statement-inner{
+  margin-top:40vh;
+  max-width:900px;
+  padding:0 24px;
+  text-align:center;
+  line-height:1.8;
+  backdrop-filter: blur(2px);
+}
+
+.statement-title{
+  font-size:32px;
+  margin-bottom:24px;
+  font-weight:700;
+  color:#222;
+}
+
+.statement-body{
+  font-size:16px;
+  color:#333;
+}
+
+/* 인터뷰 팝업 */
+#interview-screen{
+  position:fixed;
+  top:0;left:0;
+  width:100vw;height:100vh;
+  background:rgba(255,255,255,0.88);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+  backdrop-filter: blur(4px);
+}
+
+.typing-box{
+  font-size:20px;
+  max-width:800px;
+  white-space:pre-line;
+  color:#111;
+}
